@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Blog</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {background-color: #F5F3F2;}
+        h1   {color: rgb(112, 134, 106);}
+        p    {color: #000000;}
+    </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center;">{{post.title}}</h1>
+                <small style="text-align: justify;">by: {{post.author.first_name}} {{post.author.last_name}}</small><br/>
+                {{post.body}}
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Blog</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <style>
+    body {background-color: #F5F3F2;}
+        h1   {color: rgb(112, 134, 106);}
+        p    {color: #000000;}
+    </style>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center;">Blog Post</h1>
+                <ul >
+                    {% for post in object_list%}
+                        <br>
+                        <li style="text-align: justify;">
+                            <a href="{% url 'details'  post.pk %}">
+                                <b>{{post.title}}</b>
+                            </a>
+                            {{post.author}} <br>
+                            {{post.body}}
+                            <br>
+                        </li>
+                    {% endfor%}
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>
